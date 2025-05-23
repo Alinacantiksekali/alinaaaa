@@ -1,0 +1,363 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f4f6f8;
+      padding: 30px;
+      transition: background-color 0.3s, color 0.3s;
+      color: #333;
+    }
+
+    .cv-container {
+      max-width: 1000px;
+      margin: auto;
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.08);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .cv-header {
+      background: #001f3f;
+      color: #ffffff;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Toggle Button for Night Mode */
+    .toggle-night-mode {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #00aaff;
+      border: none;
+      border-radius: 20px;
+      width: 50px;
+      height: 28px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 170, 255, 0.6);
+      transition: background-color 0.3s;
+    }
+    .toggle-night-mode:focus {
+      outline: none;
+    }
+    .toggle-night-mode .circle {
+      background: white;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      position: relative;
+      top: 3px;
+      left: 3px;
+      transition: transform 0.3s;
+    }
+    .toggle-night-mode.active {
+      background: #004466;
+    }
+    .toggle-night-mode.active .circle {
+      transform: translateX(22px);
+    }
+
+    .cv-header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(0, 31, 63, 0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .cv-header img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 31, 63, 0.9);
+    }
+
+    .cv-header h1 {
+      font-size: 28px;
+      margin-top: 15px;
+      font-weight: 700;
+      color: #00aaff;
+      text-shadow: 1px 1px 2px #003355;
+      transition: color 0.3s;
+    }
+
+    .cv-header p {
+      font-size: 16px;
+      font-weight: 300;
+      letter-spacing: 1.2px;
+      margin-top: 6px;
+      transition: color 0.3s;
+    }
+
+    .cv-main {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 30px;
+      transition: color 0.3s;
+    }
+
+    .left, .right {
+      padding: 30px;
+    }
+
+    .left {
+      background: #f0f3f5;
+      border-right: 1px solid #ddd;
+      border-radius: 0 0 0 16px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .section {
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .section h3 {
+      font-size: 16px;
+      color: #001f3f;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #00aaff;
+      padding-bottom: 6px;
+      font-weight: 600;
+      letter-spacing: 0.7px;
+      transition: color 0.3s, border-color 0.3s;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    /* Progress Bar for Skills */
+    .skill {
+      margin-bottom: 14px;
+    }
+
+    .skill-name {
+      font-weight: 600;
+      margin-bottom: 4px;
+      font-size: 14px;
+      color: #001f3f;
+      transition: color 0.3s;
+    }
+
+    .progress-bar {
+      background: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 12px;
+      width: 100%;
+    }
+
+    .progress {
+      height: 100%;
+      background: #00aaff;
+      width: 0;
+      border-radius: 10px;
+      transition: width 1.2s ease-in-out, background-color 0.3s;
+    }
+
+    /* Timeline style for Pendidikan and Pengalaman */
+    .timeline {
+      position: relative;
+      margin-left: 15px;
+      padding-left: 15px;
+      border-left: 2px solid #00aaff;
+      transition: border-color 0.3s;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -11px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      background: #00aaff;
+      border-radius: 50%;
+      border: 3px solid #ffffff;
+      box-shadow: 0 0 6px rgba(0,170,255,0.7);
+      transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
+
+    .timeline-item strong {
+      color: #001f3f;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .timeline-item span {
+      display: block;
+      font-size: 13px;
+      color: #666;
+      margin-top: 2px;
+      font-style: italic;
+      transition: color 0.3s;
+    }
+
+    /* Hover effect on social media icons */
+    .social-icons a {
+      margin-right: 14px;
+      color: #001f3f;
+      font-size: 22px;
+      text-decoration: none;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #00aaff;
+      transform: scale(1.2);
+    }
+
+    .right .section p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #444;
+      transition: color 0.3s;
+    }
+
+    .download-button {
+      text-align: center;
+      padding: 20px 30px;
+      background: #001f3f;
+      border-radius: 0 0 16px 16px;
+      transition: background-color 0.3s;
+    }
+
+    .download-button a {
+      display: inline-block;
+      background: #00aaff;
+      color: #ffffff;
+      padding: 12px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      box-shadow: 0 5px 15px rgba(0, 170, 255, 0.6);
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    .download-button a:hover {
+      background: #0077aa;
+      box-shadow: 0 8px 20px rgba(0, 119, 170, 0.8);
+    }
+
+    @media (max-width: 768px) {
+      .cv-main {
+        grid-template-columns: 1fr;
+        border-right: none;
+      }
+      .left {
+        border-radius: 0 0 16px 16px;
+        border-right: none;
+        margin-bottom: 20px;
+      }
+    }
+
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background: #121212;
+      color: #ddd;
+    }
+    body.dark-mode .cv-container {
+      background: #1e1e1e;
+      color: #ddd;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    }
+    body.dark-mode .cv-header {
+      background: #0b3d91;
+      color: #aad4ff;
+    }
+    body.dark-mode .cv-header h1 {
+      color: #66b2ff;
+      text-shadow: none;
+    }
+    body.dark-mode .cv-header p {
+      color: #a0cfff;
+    }
+    body.dark-mode .left {
+      background: #292929;
+      border-right: 1px solid #444;
+    }
+    body.dark-mode .section {
+      background: #2a2a2a;
+      box-shadow: none;
+      color: #ddd;
+    }
+    body.dark-mode .section h3 {
+      color: #66b2ff;
+      border-bottom-color: #3399ff;
+    }
+    body.dark-mode li,
+    body.dark-mode .right .section p,
+    body.dark-mode .timeline-item span {
+      color: #ccc;
+    }
+    body.dark-mode .skill-name,
+    body.dark-mode .timeline-item strong,
+    body.dark-mode .social-icons a {
+      color: #aad4ff;
+    }
+    body.dark-mode .progress-bar {
+      background: #444;
+    }
+    body.dark-mode .progress {
+      background: #3399ff;
+    }
+    body.dark-mode .timeline {
+      border-left-color: #3399ff;
+    }
+    body.dark-mode .timeline-item::before {
+      background: #3399ff;
+      border-color: #2a2a2a;
+      box-shadow: 0 0 6px rgba(51,153,255,0.7);
+    }
+    body.dark-mode .social-icons a {
+      color: #aad4ff;
+    }
+    body.dark-mode .social-icons a:hover {
+      color: #66b2ff;
+    }
+    body.dark-mode .download-button {
+      background: #0b3d91;
+    }
+    body.dark-mode .download-button a {
+      background: #3399ff;
+      box-shadow: 0 5px 15px rgba(51,153,255,0.6);
+    }
+    body.dark-mode .download-button a:hover {
+      background: #2672cc;
+      box-shadow: 0 8px 20px rgba(38,114,204,0.8);
+    }
+
+    .progress.html { width: 90%; }
+.progress.css { width: 80%; }
+.progress.js { width: 70%; }
+/* Tambahkan sesuai skill kamu */
+
+  

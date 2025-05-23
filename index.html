@@ -1,170 +1,177 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
-        body {
-            background-color: #fce8f3;
-            color: #333;
-            text-align: center;
-        }
-        nav {
-            background: #ffb3c6;
-            color: white;
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            border-radius: 0 0 20px 20px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 12px 25px;
-            font-size: 18px;
-            font-weight: bold;
-            transition: 0.3s;
-            border-radius: 50px;
-            background: #ff85a2;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        }
-        nav a:hover {
-            background: #ffccd5;
-            transform: scale(1.1);
-        }
-        section {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            padding: 20px;
-            font-size: 1.5rem;
-            transition: 0.5s;
-            position: relative;
-        }
-        .divider {
-            padding: 15px 30px;
-            background: #ff85a2;
-            color: white;
-            font-weight: bold;
-            font-size: 1.5rem;
-            border-radius: 15px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-            margin: 30px auto 10px;
-            animation: bounce 1s infinite alternate;
-        }
-        @keyframes bounce {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-5px); }
-        }
-        #profil { background: linear-gradient(to right, #ffd6e0, #ffb3c6); }
-        #pendidikan { background: linear-gradient(to right, #ffcad4, #ffafbd); }
-        #pengalaman { background: linear-gradient(to right, #fbc2eb, #a6c1ee); }
-        #hobi { background: linear-gradient(to right, #d4a5ff, #ffafbd); }
-        #kontak { background: linear-gradient(to right, #ffc2d1, #ffa6c1); }
-        p, h2 {
-            margin-top: 10px;
-        }
-        p {
-            font-size: 1.2rem;
-        }
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-            border: 4px solid #ff85a2;
-        }
-        .social-links a {
-            display: inline-block;
-            margin: 10px;
-            text-decoration: none;
-            color: white;
-            background: #ff85a2;
-            padding: 10px 20px;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
-        .social-links a:hover {
-            background: #ffb3c6;
-            transform: rotate(5deg);
-        }
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 10px;
-                padding: 10px 0;
-                border-radius: 0 0 15px 15px;
-            }
-            nav a {
-                padding: 10px 20px;
-                font-size: 16px;
-            }
-            section {
-                font-size: 1.2rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV Fatichah Asmalina</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <nav>
-        <a href="#profil">✨ Profil</a>
-        <a href="#pendidikan">📚 Pendidikan</a>
-        <a href="#pengalaman">💼 Pengalaman</a>
-        <a href="#hobi">🎨 Hobi</a>
-        <a href="#kontak">📞 Kontak</a>
-    </nav>
-    <section id="profil">
-        <div class="divider">✨ Profil</div>
-        <img src="gambar/alin.jpg" alt="Foto Profil" class="profile-img">
-        <p>Nama: Fatichah Asmalina</p>
-        <p>Profesi: Pelajar SMK Teknik Komputer dan Jaringan</p>
-        <p>Alamat: Wonosobo, Indonesia</p>
-        <p>Tanggal Lahir: 7 Januari 2007</p>
-        <p>Saya adalah seorang yang selalu ingin belajar dan berkembang. Saya tertarik dengan dunia teknologi, desain, dan hal-hal kreatif lainnya. Selain itu, saya suka mencoba tantangan baru serta bekerja sama dalam tim untuk mencapai tujuan bersama.</p>
-    </section>
-    <section id="pendidikan">
-        <div class="divider">📚 Pendidikan</div>
-        <p>SD Negeri 1 Sendang Sari</p>
-        <p> SMP Negeri 3 Garung</p>
-        <p>SMK Negeri 1 Wonosobo - Teknik Komputer dan Jaringan</p>
-    </section>
-    <section id="pengalaman">
-        <div class="divider">💼 Pengalaman</div>
-        <p>Belum memiliki pengalaman kerja, namun aktif dalam proyek dan kegiatan sekolah.</p>
-    </section>
-    <section id="hobi">
-        <div class="divider">🎨 Hobi</div>
-        <p>Menggambar</p>
-        <p>Mendengarkan musik</p>
-        <p>Membaca</p>
-    </section>
-    <section id="kontak">
-        <div class="divider">📞 Kontak</div>
-        <p>Email: Alinacantikbaikhati@gmail.com</p>
-        <p>Telepon: 08123456789</p>
-        <div class="social-links">
-            <a href="https://www.instagram.com/heheyippe?igsh=MTQ0aXRneGw3dmlkOQ==" target="_blank">📸 Instagram</a>
-            <a href="https://www.tiktok.com/@sukaaacoklatttt_1?_t=ZS-8t6n6vphdua&_r=1" target="_blank">🎵 TikTok</a>
-            <a href="https://www.facebook.com/share/15Ut3DyS3S/" target="_blank">📘 Facebook</a>
+  <div class="cv-container" id="cv">
+    <div class="cv-header">
+      
+<div class="cv-header">
+  <button class="toggle-night-mode">
+    <div class="circle"></div>
+  </button>
+ 
+</div>
+
+      <img src="gambar/alin.1.jpg" alt="Foto Fatichah" />
+      <h1>Fatichah Asmalina</h1>
+      <p>Siswi SMK | Jurusan Teknik Komputer dan Jaringan</p>
+    </div>
+    <div class="cv-main">
+      <div class="left">
+        <div class="section">
+          <h3>Data Pribadi</h3>
+          <ul>
+            <li>Tempat, Tanggal Lahir: Wonosobo, 7 Januari 2007</li>
+            <li>Jenis Kelamin: Perempuan</li>
+            <li>Status: Pelajar</li>
+            <li>Alamat: JL. Ahmad Yani No. 84</li>
+          </ul>
         </div>
-    </section>
+
+        <div class="section">
+          <h3>Keahlian</h3>
+          <div class="skill">
+            <div class="skill-name">Jaringan Komputer</div>
+            <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">Cisco Packet Tracer</div>
+            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">VoIP & VLAN</div>
+            <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">HTML & CSS</div>
+            <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">Desain UI dasar</div>
+            <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Bahasa</h3>
+          <ul>
+            <li>Bahasa Indonesia – Aktif</li>
+            <li>Bahasa Inggris – Menengah</li>
+            <li>Bahasa Jepang – Menengah</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Hobi</h3>
+          <ul>
+            <li>Membaca buku</li>
+            <li>Bermain</li>
+            <li>Fotografi</li>
+            <li>Olahraga ringan (jogging, senam, gym)</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Kontak</h3>
+          <ul>
+            <li>Email: Alinacantikbaikhati123@gmail.com</li>
+            <li>HP: 0882-0036-02982</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Sosial Media</h3>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/iniibeyyyy" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.tiktok.com/@iniiibeyyyy" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="https://www.facebook.com/share/15Ut3DyS3S/" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="section">
+          <h3>Deskripsi Diri</h3>
+          <p>
+            Saya adalah seorang pelajar SMK jurusan Teknik Komputer dan Jaringan yang memiliki semangat tinggi untuk terus belajar dan berkembang.
+            Terbiasa bekerja secara individu maupun dalam tim, saya dikenal sebagai pribadi yang bertanggung jawab, cepat tanggap, dan mampu menyelesaikan tugas dengan teliti.
+            Memiliki minat besar dalam dunia teknologi, desain, dan komunikasi digital, saya juga aktif mengembangkan diri melalui berbagai proyek sekolah maupun kegiatan mandiri.
+            Dengan komitmen dan etos kerja yang kuat, saya siap memberikan kontribusi terbaik di lingkungan kerja profesional.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>Pendidikan</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <strong>2014 - 2020</strong>
+              <span>SD Negeri 1 Sendang Sari</span>
+            </div>
+            <div class="timeline-item">
+              <strong>2021 - 2023</strong>
+              <span>SMP Negeri 3 Garung</span>
+            </div>
+            <div class="timeline-item">
+              <strong>2023 - Sekarang</strong>
+              <span>SMK Negeri 1 Wonosobo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Prestasi</h3>
+          <ul>
+            <li>Juara 1 Lomba Dokter Kecil</li>
+            <li>Juara 2 Lomba TIKI</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Sertifikat</h3>
+          <ul>
+            <li>2024 - Sertifikat Ekstra Menjahit</li>
+            <li>2025 - Sertifikat Pelatihan Budaya & Bahasa Jepang</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Riwayat Organisasi</h3>
+          <ul>
+            <li>Anggota IPNU IPPNU (2020–Sekarang)</li>
+            <li>Ekstrakurikuler IT Club – Anggota Aktif (2022–Sekarang)</li>
+            <li>Tim Proyek TJKN (2025)</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Portofolio Proyek</h3>
+          <ul>
+            <li>Desain jaringan VoIP 3 kantor (Jakarta–Bandung–Surabaya)</li>
+            <li>Setup jaringan LAN + Wireless Lab Komputer</li>
+            <li>Desain tampilan CV Web HTML + CSS pribadi</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="download-button">
+      <a href="#" onclick="window.print()">Download PDF</a>
+    </div>
+  </div>
+
+  <!-- Script Toggle Night Mode -->
+  <script>
+    const toggleBtn = document.querySelector('.toggle-night-mode');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleBtn.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
